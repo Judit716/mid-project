@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    
+    
+<body>
+
+    <div class="navbar-container">
+        <nav>
+            <img src="images/circle.svg" alt="Circle logo" aria-label="Logo">
+        <a href="index.html" aria-label="Go to homepage">Home</a>
+        <a href="pages/project-detail/projectDetail.html" aria-label="Go to Projects">Projects</a>
+        <a href="#services" aria-label="Go to Services section">Services</a>
+        <a href="pages/contact-page/contactPage.html" class="button" aria-label="Contact Us">Contact Us</a>
+        </nav>
+    </div>
+
+    <!--Form Section-->
+    <form id="contact-us-form">
+        <label for="name">Full Name*</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    
+        <label for="email">Your Email*</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+        <label for="phone">Phone</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+        <small>Format: 1234567890</small>
+    
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+    
+        <button type="submit">Subscribe</button>
+    </form>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <a href="index.html">
+                <img src="images/circle.svg" alt="Circle logo" aria-label="Logo">
+            </a>
+            <p></p>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li><a href="team.html" title="Meet our team">Team</a></li>
+                <li><a href="services.html" title="Discover our services">Services</a></li>
+                <li><a href="about.html" title="Learn more about us">About Us</a></li>
+                <li><a href="press.html" title="Press and Media">Press</a></li>
+                <li><a href="projects.html" title="View our projects">Projects</a></li>
+                <li><a href="privacy-policy.html" title="Privacy Policy">Privacy Policy</a></li>
+            </ul>
+
+        </div>
+       
+    </footer>
+    
+</body>
+
+</html>
