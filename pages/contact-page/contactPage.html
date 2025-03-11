@@ -8,16 +8,28 @@
     
     
 <body>
-
     <div class="navbar-container">
         <nav>
+            <!-- Logo alineado a la izquierda -->
             <img src="/images/circle.svg" alt="Circle logo" aria-label="Logo">
-        <a href="/index.html" aria-label="Go to homepage">Home</a>
-        <a href="/pages/project-detail/projectDetail.html" aria-label="Go to Projects">Projects</a>
-        <a href="#services" aria-label="Go to Services section">Services</a>
-        <a href="/pages/contact-page/contactPage.html" class="button" aria-label="Contact Us">Contact Us</a>
+            
+            <!-- Enlaces centrados -->
+            <ul class="nav-links">
+                <li><a class="nav-link" href="/index.html">Home</a></li>
+                <li><a class="nav-link" href="/pages/project-detail/projectDetail.html">Projects</a></li>
+                <li><a class="nav-link" href="#services">Services</a></li>
+            </ul>
+    
+            <!-- Botón alineado a la derecha -->
+            <a href="/pages/contact-page/contactPage.html" class="button">Contact Us</a>
+    
+            <!-- Menú burger para mobile -->
+            <div class="menu-toggle">
+                <img src="/images/burger.png" alt="Menu">
+            </div>
         </nav>
     </div>
+    
 
     <!--Form Section-->
     <form id="contact-us-form">

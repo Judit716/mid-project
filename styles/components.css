@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-container {
+    width: 100%;
+    padding: 15px 20px;
+}
+
+/* Barra de navegación */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    max-width: 100%; 
+    margin: 0 auto;
+
+
+    img {
+        height: 30px;
+    }
+
+    ul {
+        &.nav-links {
+            display: flex;
+            gap: 50px;
+            flex-grow: 1; 
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            
+
+            
+                
+            }
+        }
+        
+    }
+
+
+    .nav-link { 
+                    
+        text-decoration: none;
+    color: var(--color-secondary);
+    
+    
+    
+}
+
+
+
+
+.nav-link:active {
+    color: var(--button-color);
+}
+
+
+.menu-toggle {
+    display: none;
+}
+.button-general {
+    padding: 10px 15px;
+    background-color: var(--button-color);
+    color: var(--color-secondary-light);
+    
+    border-radius: 2px;
+    margin-left: auto; 
+    border-style: none;
+}
+.button-general a {
+    text-decoration: none;
+    font-size: 12px;
+    color: var(--color-secondary-light);
+   
+}
+.button {
+    padding: 10px 15px;
+    background-color: var(--button-color);
+    color: var(--color-secondary-light);
+    text-decoration: none;
+    border-radius: 2px;
+    margin-left: auto; 
+}
+
+
+
+
+/* Estilos para mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none; /* Ocultar los enlaces */
+        flex-direction: column; /* Apilar los enlaces */
+        gap: 20px;
+        width: 100%;
+        text-align: right;
+        position: absolute;
+        top: 60px;  /* Ajusta según el espacio que desees entre el logo y los enlaces */
+        right: 0;
+        background-color: white; /* Fondo blanco para el menú desplegable */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el menú */
+        z-index: 9999; /* Asegura que se muestre encima de otros elementos */
+
+    }
+    .nav-link {
+        padding-right: 40px;
+    }
+
+    .menu-toggle {
+        display: block; 
+    }
+
+    .nav-links.active {
+        display: flex; /* Mostrar los enlaces */
+    }
+
+    #nav-button {
+        display: block; 
+    }
+}
+
+footer  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    max-width: 100%; 
+    margin: 0 auto;
+    padding: 100px 20px;
+
+    img {
+        height: 30px;
+    }
+    
+    
+    }
+
+    .footer-right ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px; 
+        padding: 0;
+        list-style: none;
+        margin: 0;
+        
+    }
+    .footer-right a {
+        text-decoration: none;
+        color: var(--color-secondary);
+    }
+   
+    #recent-projects, #services {
+        padding: 40px;
+        background-color: #f4f4f4;
+    }
+    
+    #recent-projects, #services h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2rem;
+        color: var(--color-text);
+    }
+    
+    .project-cards, .service-cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .project-card, .services-cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        max-width: 300px;
+        background-color: #fff;
+        border-radius: 1px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        padding: 0; 
+        margin: 0; 
+    }
+    
+   
+    .project-card:hover {
+        transform: translateY(-10px);
+    }
+    
+    
+    .project-card img {
+        width: 100%; 
+        height: auto; 
+        object-fit: cover; 
+        margin: 0; 
+    }
+    
+   
+    .project-card h3, .services-cards h3 {
+        text-align: center;
+        margin: 15px 0;
+        font-size: 1.5rem;
+        color: var(--color-text);
+    }
+    
+   
+    .project-card p, .services-cards p {
+        padding: 0 15px;
+        color: var(--color-text);
+        text-align: center;
+    }
+    
+    
+    .project-card a, .service-cards a {
+        padding-top: 10px;
+        font-size: 1rem;
+        text-align: start;
+    }
+    
+    
+    
+    
+
+
+
+    
+
+    
+        
+
+           
+
+
+
+
+
+

@@ -11,13 +11,26 @@
 <body>
     <div class="navbar-container">
         <nav>
-            <img src="images/circle.svg" alt="Circle logo" aria-label="Logo">
-        <a href="index.html" aria-label="Go to homepage">Home</a>
-        <a href="pages/project-detail/projectDetail.html" aria-label="Go to Projects">Projects</a>
-        <a href="#services" aria-label="Go to Services section">Services</a>
-        <a href="pages/contact-page/contactPage.html" class="button" aria-label="Contact Us">Contact Us</a>
+            <!-- Logo alineado a la izquierda -->
+            <img src="/images/circle.svg" alt="Circle logo" aria-label="Logo">
+            
+            <!-- Enlaces centrados -->
+            <ul class="nav-links">
+                <li><a class="nav-link" href="/index.html">Home</a></li>
+                <li><a class="nav-link" href="/pages/project-detail/projectDetail.html">Projects</a></li>
+                <li><a class="nav-link" href="#services">Services</a></li>
+            </ul>
+    
+            
+            <a href="/pages/contact-page/contactPage.html" id="nav-button" class="button">Contact Us</a>
+    
+            <!-- Menú burger para mobile -->
+            <div class="menu-toggle">
+                <img src="/images/burger.png" alt="Menu">
+            </div>
         </nav>
     </div>
+    
 
     <!--Hero Section-->
     <section id="hero">
@@ -33,8 +46,8 @@
         </div>
        
         <div class="buttons">
-            <button><a href="contactPage.html">Get in Touch</a></button>
-            <button><a href="#recent-projects">See Projects</a></button>
+            <button class="button-general"><a href="contactPage.html">Get in Touch</a></button>
+            <button class="button-general"><a href="#recent-projects">See Projects</a></button>
         </div>
 
     </section>
@@ -110,25 +123,29 @@
  <section id="services">
     <h2>Our Services</h2>
 
-    <div class="service-cards">
+    <div class="services-cards">
+
         <div class="service-card">
             <img src="images/iconsSvg (1).svg" alt="Service 1">
             <h3>User Interface Design</h3>
             <p>Circle provides you with a stunning user interface design that is accessible to everyone.</p>
             <a href="services.html">Learn More</a>
         </div>
+
         <div class="service-card">
             <img src="images/iconsSvg (2).svg" alt="Service 2">
             <h3>User Experience Design</h3>
             <p>Circle always focuses on delivering the best user experience to your customers.</p>
             <a href="services.html">Learn More</a>
         </div>
+
         <div class="service-card">
             <img src="images/iconsSvg (3).svg" alt="Service 3">
             <h3>Application Development</h3>
             <p>We develop high-quality mobile and web applications using the latest technology stack.</p>
             <a href="services.html">Learn More</a>
         </div>
+
     </div>
 </section>
 
@@ -140,7 +157,7 @@
         <form id="contact-form">
             <label for="email">Your Email:</label>
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            <button type="submit">Subscribe</button>
+            <button class="button-general" type="submit">Subscribe</button>
         </form>
     </section>
 

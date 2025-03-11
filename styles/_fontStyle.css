@@ -77,6 +77,9 @@ body {
     font-size: var(--font-size-body);
     font-weight: var(--font-weight-regular);
     color: var(--color-text);
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: var(--color-primary-light);
 }
 
 p {
