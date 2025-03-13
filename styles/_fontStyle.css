@@ -79,7 +79,7 @@ body {
     color: var(--color-text);
     padding-left: 50px;
     padding-right: 50px;
-    background-color: var(--color-primary-light);
+    background-color: var(--color-background);
 }
 
 p {

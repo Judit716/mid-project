@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Circle</title>
     <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="/index.css">
     
 
 </head>
@@ -34,7 +35,7 @@
 
     <!--Hero Section-->
     <section id="hero">
-        <div>
+        <div class="heroImages">
             <img src="images/card-1.png" alt="card image">
             <img src="images/card-2.png" alt="card image">
             <img src="images/hero-image.png" alt="hero image">
@@ -43,12 +44,13 @@
         <div class="heroText">
             <h1>Empower Your Business With Stunning Design!</h1>
             <p>Circle is a digital design and development studio. We design and develop astonishing websites and mobile apps.</p>
+            <div class="buttons">
+                <button class="button-general"><a href="contactPage.html">Get in Touch</a></button>
+                <button class="button-secondary"><a href="#recent-projects">See Our work</a></button>
+            </div>
         </div>
        
-        <div class="buttons">
-            <button class="button-general"><a href="contactPage.html">Get in Touch</a></button>
-            <button class="button-general"><a href="#recent-projects">See Projects</a></button>
-        </div>
+        
 
     </section>
 
@@ -100,7 +102,7 @@
 
     
 
-    <div class="testimonials">
+    
         <img class="testimonial-image top-left" src="images/memoji-1.png" alt="Client 1">
         <img class="testimonial-image top-right" src="images/memoji-2.png" alt="Client 2">
         <img class="testimonial-image bottom-left" src="images/memoji-3.png" alt="Client 3">
@@ -110,6 +112,7 @@
             <h2>Hear What Our Clients Have to Say</h2>
             <h4>“Circle helped us through every stage of our startup. We really enjoyed working with you.”</h4>
         </div>
+
         <div class="client-bottom">
             <img class="testimonial-client" src="images/profile.png" alt="Client 4">
             <p class="client-name">Kristin Watson</p>
@@ -126,21 +129,21 @@
     <div class="services-cards">
 
         <div class="service-card">
-            <img src="images/iconsSvg (1).svg" alt="Service 1">
+            <img class="icon-card" src="images/iconsSvg (1).svg" alt="Service 1">
             <h3>User Interface Design</h3>
             <p>Circle provides you with a stunning user interface design that is accessible to everyone.</p>
             <a href="services.html">Learn More</a>
         </div>
 
         <div class="service-card">
-            <img src="images/iconsSvg (2).svg" alt="Service 2">
+            <img class="icon-card" src="images/iconsSvg (2).svg" alt="Service 2">
             <h3>User Experience Design</h3>
             <p>Circle always focuses on delivering the best user experience to your customers.</p>
             <a href="services.html">Learn More</a>
         </div>
 
         <div class="service-card">
-            <img src="images/iconsSvg (3).svg" alt="Service 3">
+            <img class="icon-card" src="images/iconsSvg (3).svg" alt="Service 3">
             <h3>Application Development</h3>
             <p>We develop high-quality mobile and web applications using the latest technology stack.</p>
             <a href="services.html">Learn More</a>
@@ -152,13 +155,15 @@
 
     <!-- Doubts Section -->
     <section id="doubts">
+        <div class="doubts-div">
         <h2>Do you have any questions?</h2>
         <p>Let us help you!</p>
         <form id="contact-form">
-            <label for="email">Your Email:</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            <button class="button-general" type="submit">Subscribe</button>
+            <label for="email"></label>
+            <input class="email-form" type="email" id="email" name="email" placeholder="Enter your email" required>
+            <button class="button-general form" type="submit">Subscribe</button>
         </form>
+    </div>
     </section>
 
     <!-- Footer -->
