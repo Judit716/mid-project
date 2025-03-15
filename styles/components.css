@@ -261,7 +261,25 @@ footer  {
     
 
 
+/* Responsive card*/
+@media (max-width: 768px) {
+    
+    .project-card, .service-card {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
 
+    
+    #recent-projects h2, #services h2 {
+        font-size: 1.5rem; 
+        margin-bottom: 20px;
+    }
+
+    
+    .project-cards, .services-cards {
+        justify-content: center; 
+    }
+}
     
 
     
