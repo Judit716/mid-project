@@ -116,17 +116,17 @@ nav {
     }
 
     .nav-links {
-        display: none; /* Ocultar los enlaces */
-        flex-direction: column; /* Apilar los enlaces */
+        display: none; 
+        flex-direction: column; 
         gap: 20px;
         width: 100%;
         text-align: right;
         position: absolute;
-        top: 60px;  /* Ajusta según el espacio que desees entre el logo y los enlaces */
+        top: 60px;  
         right: 0;
-        background-color: white; /* Fondo blanco para el menú desplegable */
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para el menú */
-        z-index: 9999; /* Asegura que se muestre encima de otros elementos */
+        background-color: white; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        z-index: 9999; 
 
     }
     .nav-link {
@@ -135,15 +135,15 @@ nav {
 
     .menu-toggle {
         display: block; 
+        margin-left: 2rem;
+       
     }
 
     .nav-links.active {
         display: flex; /* Mostrar los enlaces */
     }
 
-    #nav-button {
-        display: block; 
-    }
+    
 }
 
 
