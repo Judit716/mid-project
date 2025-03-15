@@ -1,0 +1,78 @@
+body {
+    
+    padding: 0 50px; /* Aplica márgenes laterales de 50px */
+    
+    width: calc(100vw - 100px); /* Asegura que el ancho total reste los 50px de cada lado */
+    max-width: 100%; /* Evita que se desborde */
+    min-height: 100vh; /* Asegura que ocupe al menos toda la pantalla */
+    
+    box-sizing: border-box; /* Hace que el padding no sume al ancho total */
+}
+
+.project-description {
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    flex-wrap: wrap;
+}
+
+#project-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.project-image img {
+    object-fit: cover; /* Asegura que la imagen cubra todo sin deformarse */
+    display: block;
+    
+    height: 90vh;
+    width: 100vw;
+    
+}
+
+.project-image p {
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+    line-height: 2rem;
+}
+
+
+
+
+#doubts {
+    margin-top: 10rem;
+    background-color: var(--color-action);
+    width: 95vw;
+    height: 20vw;
+    
+}
+
+.doubts-div {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.doubts-div h2 {
+    margin-top: 5rem;
+    color: var(--color-secondary-dark);
+   
+}
+
+.email-form, .button-general.form {
+    border: none; 
+    height: 60px; 
+    width: 300px;
+    padding: 5px; 
+    font-size: 1rem; 
+    outline: none; 
+    gap: 3rem;
+    
+}
+ 
+.button-general.form {
+    width: 200px;
+}
+

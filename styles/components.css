@@ -194,7 +194,7 @@ footer  {
     
     .project-cards, .services-cards {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-evenly;
         gap: 20px;
         flex-wrap: wrap;
     }
