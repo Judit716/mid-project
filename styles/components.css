@@ -24,7 +24,7 @@ nav {
 
     ul {
         &.nav-links {
-            display: flex;
+            
             gap: 50px;
             flex-grow: 1; 
             justify-content: center;
@@ -54,9 +54,7 @@ nav {
 
 
 
-.nav-link:active {
-    color: var(--button-color);
-}
+
 
 
 .menu-toggle {
@@ -129,19 +127,20 @@ nav {
         z-index: 9999; 
 
     }
+    .nav-links.active {
+        display: flex; /* Se muestra solo con .active */
+    }
     .nav-link {
         padding-right: 40px;
     }
 
     .menu-toggle {
-        display: block; 
+        display: flex; 
         margin-left: 2rem;
-       
+       cursor: pointer;
     }
 
-    .nav-links.active {
-        display: flex; /* Mostrar los enlaces */
-    }
+   
 
     
 }
