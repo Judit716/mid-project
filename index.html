@@ -6,6 +6,7 @@
     <title>Circle</title>
     <link rel="stylesheet" href="/styles/main.css">
     <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="/projects/1.html">
     
 
 </head>
@@ -77,21 +78,21 @@
                 <img src="images/1.jpg" alt="Proyecto 1">
                 <h3>Simplify</h3>
                 <p>UI Design & App Development</p>
-                <a href="#simplify">Learn More</a>
+                <a href="/pages/project-detail/projectDetail.html">Learn More</a>
             </div>
 
             <div class="project-card">
                 <img src="images/2.jpg" alt="Proyecto 2">
                 <h3>Dashcoin</h3>
                 <p>Web Development</p>
-                <a href="projectDetail.html">Learn More</a>
+                <a href="1.html?id=${project.id}">Learn More</a>
             </div>
 
             <div class="project-card">
                 <img src="images/3.jpg" alt="Proyecto 3">
                 <h3>Vectorify</h3>
                 <p>User Experience Design</p>
-                <a href="projectDetail.html">Learn More</a>
+                <a href="1.html?id=${project.id}">Learn More</a>
             </div>
 
         </div>
@@ -190,5 +191,8 @@
 
     <script src="scripts/main.js"></script>
     
+    <script src="functions.js/server.js"></script>
+    
 </body>
+
 </html>
