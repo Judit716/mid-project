@@ -1,0 +1,36 @@
+{
+  "projects": [
+    {
+      "id": 4,
+      "name": "Lorem ipsum",
+      "description": "Lorem ipsum",
+      "content": "Lorem ipsum dolor sit amet...",
+      "image": "https://github.com/ironhack-jc/mid-term-api/blob/main/4.jpg?raw=true",
+      "completed_on": "June 10, 2021"
+    },
+    {
+      "id": 3,
+      "name": "Vectorify",
+      "description": "User Experience Design",
+      "content": "Lorem ipsum dolor sit amet...",
+      "image": "https://github.com/ironhack-jc/mid-term-api/blob/main/3.jpg?raw=true",
+      "completed_on": "June 10, 2021"
+    },
+    {
+      "id": 2,
+      "name": "Dashcoin",
+      "description": "Web Development",
+      "content": "Lorem ipsum dolor sit amet...",
+      "image": "https://github.com/ironhack-jc/mid-term-api/blob/main/2.jpg?raw=true",
+      "completed_on": "June 10, 2021"
+    },
+    {
+      "id": 1,
+      "name": "Simplify",
+      "description": "UI Design & App Development",
+      "content": "Lorem ipsum dolor sit amet...",
+      "image": "https://github.com/ironhack-jc/mid-term-api/blob/main/1.jpg?raw=true",
+      "completed_on": "June 22, 2021"
+    }
+  ]
+}

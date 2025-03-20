@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar-container {
+    width: 100%;
+    padding: 15px 20px;
+}
+
+/* Barra de navegación */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    max-width: 100%; 
+    margin: 0 auto; }
+
+
+   
+
+    
+        .nav-links {
+            display: flex;
+            gap: 50px;
+            flex-grow: 1; 
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+
+            
+
+            
+                
+            }
+       
+
+
+    .nav-link { 
+                    
+        text-decoration: none;
+    color: var(--color-secondary);
+    
+    
+    
+}
+
+
+
+
+
+
+
+.menu-toggle {
+    display: none;
+    
+}
+.menu-toggle img {
+   margin: 0;
+    width: 50%;
+}
+
+/* Botones */
+.button-general {
+    padding: 10px 15px;
+    background-color: var(--button-color);
+    color: var(--color-secondary-light);
+    
+    border-radius: 2px;
+    margin-left: auto; 
+    border-style: none;
+}
+.button-general a {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--color-secondary-light);
+   
+}
+.button-secondary {
+    padding: 10px 15px;
+    
+    color: var(--color-secondary-light);
+    text-decoration: none;
+    border-radius: 2px;
+    margin-left: auto; 
+    border-style: none;
+}
+.button-secondary a {
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--color-secondary);
+   
+}
+
+
+.button {
+    padding: 10px 15px;
+    background-color: var(--button-color);
+    color: var(--color-secondary-light);
+    text-decoration: none;
+    border-radius: 2px;
+    margin-left: auto; 
+}
+
+
+/* Barra de navegación mobile*/
+
+/* Estilos para mobile */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column; 
+        gap: 20px;
+        width: 100%;
+        text-align: right;
+        position: absolute;
+        top: 60px;  
+        right: 0;
+        background-color: white; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        z-index: 9999; 
+
+    }
+    .nav-links.active {
+        display: flex; /* Se muestra solo con .active */
+    }
+    .nav-link {
+        padding-right: 40px;
+    }
+
+    .menu-toggle {
+        display: flex; 
+        margin-left: 2rem;
+       cursor: pointer;
+    }
+
+   
+
+    
+}
+
+
+/* Footer */
+footer  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    max-width: 100%; 
+    margin: 0 auto;
+    padding: 100px 20px;
+
+    img {
+        height: 30px;
+    }
+    
+    
+    }
+
+    .footer-right ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        gap: 20px; 
+        padding: 0;
+        list-style: none;
+        margin: 0;
+        
+    }
+    .footer-right a {
+        text-decoration: none;
+        color: var(--color-secondary);
+    }
+
+
+    /* Cards */
+   
+    #recent-projects, #services {
+        padding: 40px;
+        background-color: #f4f4f4;
+    }
+    
+    #recent-projects, #services h2 {
+        text-align: center;
+        margin-bottom: 30px;
+        font-size: 2rem;
+        color: var(--color-text);
+    }
+    
+    .project-cards, .services-cards {
+        display: flex;
+        justify-content: space-evenly;
+        gap: 20px;
+        flex-wrap: wrap;
+    }
+    
+    .project-card, .service-card {
+        width: 30%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        flex-wrap: wrap;
+        max-width: 300px;
+        background-color: #fff;
+        border-radius: 1px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+        padding: 0; 
+        margin: 0; 
+        
+    }
+    
+    
+   
+    .project-card:hover {
+        transform: translateY(-10px);
+    }
+    
+    
+    .project-card img {
+        width: 100%; 
+        height: auto; 
+        object-fit: cover; 
+        margin: 0; 
+    }
+    
+   
+    .project-card h3, .services-cards h3 {
+        text-align: center;
+        margin: 15px 0;
+        font-size: 1.5rem;
+        color: var(--color-text);
+    }
+    
+   
+    .project-card p, .services-cards p {
+        padding: 0 15px;
+        color: var(--color-text);
+        text-align: center;
+    }
+    
+    
+    .project-card a, .service-cards a {
+        padding-top: 10px;
+        font-size: 1rem;
+        text-align: start;
+    }
+    
+    
+    @media (max-width: 768px) {
+        .service-card {
+            width: 100%; 
+        }
+    }
+    
+
+
+/* Responsive card*/
+@media (max-width: 768px) {
+    
+    .project-card, .service-card {
+        width: 100%; 
+        margin-bottom: 20px; 
+    }
+
+    
+    #recent-projects h2, #services h2 {
+        font-size: 1.5rem; 
+        margin-bottom: 20px;
+    }
+
+    
+    .project-cards, .services-cards {
+        justify-content: center; 
+    }
+}
+    
+
+    
+        
+
+           
+
+
+
+
+
+

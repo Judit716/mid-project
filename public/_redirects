@@ -1,0 +1,6 @@
+# Redirigir cualquier URL no encontrada a la página 404
+/*    /404.html   404
+
+
+# Redirigir /old-page a /new-page
+/old-page    /new-page   301

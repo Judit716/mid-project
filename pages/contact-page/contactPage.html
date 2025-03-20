@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="stylesheet" href="contactPage.css">
+    
+    
+<body>
+    <div class="navbar-container">
+        <nav>
+            <!-- Logo alineado a la izquierda -->
+            <img src="/images/circle.svg" alt="Circle logo" aria-label="Logo">
+            
+            <!-- Enlaces centrados -->
+            <ul class="nav-links">
+                <li><a class="nav-link" href="/index.html">Home</a></li>
+                <li><a class="nav-link" href="/pages/project-detail/projectDetail.html">Projects</a></li>
+                <li><a class="nav-link" href="#services">Services</a></li>
+            </ul>
+    
+            <!-- Botón alineado a la derecha -->
+            <a href="/pages/contact-page/contactPage.html" class="button">Contact Us</a>
+    
+            <!-- Menú burger para mobile -->
+            <div class="menu-toggle">
+                <img src="/images/burger.png" alt="Menu">
+            </div>
+        </nav>
+    </div>
+    
+
+    <!--Form Section-->
+    <section id="contacts-us">
+        <h2>Contact</h2>
+
+    <form id="contact-us-form">
+        <label class="form-name" for="name">Full Name*</label>
+        <input class="form-name" type="text" id="name" name="name" placeholder="Enter your full name" required>
+    
+        <label class="form-email" for="email">Your Email*</label>
+        <input class="form-email" type="email" id="email" name="email" placeholder="Enter your email" required>
+    
+        <label class="form-phone" for="phone">Phone</label>
+        <input class="form-phone" type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}" required>
+        
+    
+        <label class="form-message" for="message">Your Message</label>
+        <textarea class="form-textarea" id="message" name="message" placeholder="Write your message here..." required></textarea>
+    
+        <button id="contact-button" class="" type="submit">Submit</button>
+    </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-left">
+            <a href="index.html">
+                <img src="/images/circle.svg" alt="Circle logo" aria-label="Logo">
+            </a>
+            <p></p>
+        </div>
+        <div class="footer-right">
+            <ul>
+                <li><a href="team.html" title="Meet our team">Team</a></li>
+                <li><a href="services.html" title="Discover our services">Services</a></li>
+                <li><a href="about.html" title="Learn more about us">About Us</a></li>
+                <li><a href="press.html" title="Press and Media">Press</a></li>
+                <li><a href="projects.html" title="View our projects">Projects</a></li>
+                <li><a href="privacy-policy.html" title="Privacy Policy">Privacy Policy</a></li>
+            </ul>
+
+        </div>
+       
+    </footer>
+
+    <script src="/scripts/main.js"></script>
+    <script src="/functions.js/server.js" ></script>
+    
+</body>
+
+</html>

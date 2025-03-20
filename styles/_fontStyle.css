@@ -1,0 +1,115 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100..900&family=Open+Sans:wght@300..800&display=swap');
+
+
+:root {
+    
+        /* Fuentes */
+        --font-primary: 'Roboto', sans-serif;    /* Fuente principal */
+        --font-secondary: 'Open Sans', sans-serif;       /* Fuente secundaria */
+        
+        /* Tamaños de texto */
+        --font-size-h1: 60px; 
+        --font-size-h2: 50px;    
+        --font-size-h3: 40px; 
+        --font-size-h4: 24px;               
+        --font-size-body-medium: 24px;                
+        --font-size-body: 20px;       
+        --font-size-text: 17px;                 
+        --font-size-caption: 15px;   
+        --font-size-caption-reg: 13px;           
+        
+        /* Altura de línea */
+        --line-height-normal: 1.5;                
+        --line-height-loose: 1.75;                
+        
+        /* Font weigtt*/
+        --font-weight-regular: 400;               
+        --font-weight-bold: 900;   
+        --font-weight-medium: 700;                  
+        
+    
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el border no aumenten el tamaño de los elementos */
+}
+
+
+/* Headings*/
+
+h1, h2, h3, h4, body {
+    font-family: var(--font-primary);
+    line-height: var(--line-height-normal);
+}
+
+h1 {
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-bold);
+
+}
+
+h2 {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-medium);
+    
+}
+
+h3 {
+    font-size: var(--font-size-h3);
+    font-weight: var(--font-weight-medium);
+   
+}
+
+h4 {
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-regular);
+    
+}
+
+/* General */
+body {
+    font-size: var(--font-size-body);
+    font-weight: var(--font-weight-regular);
+    color: var(--color-text);
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: var(--color-background);
+}
+
+p {
+    font-size: var(--font-size-text);
+    font-weight: var(--font-weight-regular);
+    font-family: var(--font-primary);
+    line-height: var(--line-height-loose);
+}
+
+/* Texto caption */
+ caption, figcaption, small {
+    font-family: var(--font-secondary);
+    line-height: var(--line-height-normal);
+ }
+
+caption {
+    font-size: var(--font-size-caption);
+    font-weight: var(--font-weight-regular);
+   
+}
+
+figcaption {
+    font-size: var(--font-size-caption-reg);
+    font-weight: var(--font-weight-regular);
+    
+}
+
+/* Otros estilos de texto */
+small {
+    font-size: var(--font-size-caption-reg);
+    font-weight: var(--font-weight-regular);
+    
+}

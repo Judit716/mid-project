@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos</title>
+  <style>
+    /* Estilos básicos para el diseño */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    #projects-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 20px;
+    }
+    .project {
+      width: 300px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .project img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .project h2 {
+      font-size: 20px;
+      margin: 10px 0;
+    }
+    .project p {
+      font-size: 14px;
+    }
+    .project a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    .project a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Lista de Proyectos</h1>
+  
+  <!-- Contenedor de los proyectos -->
+  <div id="projects-container"></div>
+
+  <script>
+    window.onload = async function () {
+      const apiUrl = "http://localhost:5000/projects";  // Asegúrate de que esta URL sea la correcta
+      try {
+        const response = await fetch(apiUrl);
+        const data = await response.json();
+        
+        // Filtra el proyecto con id = 1
+        const projectWithID1 = data.find(project => project.id === 1);
+        if (projectWithID1) {
+          displayProject(projectWithID1, "project-1");
+        }
+
+        // Muestra los otros proyectos, excepto el con id = 1
+        const otherProjects = data.filter(project => project.id !== 1).slice(0, 2);
+        otherProjects.forEach((project, index) => {
+          displayProject(project, `project-${index + 2}`);
+        });
+
+      } catch (error) {
+        console.error("Error al cargar los proyectos:", error);
+      }
+    };
+
+    function displayProject(project, id) {
+      const container = document.getElementById("projects-container");
+
+      const projectDiv = document.createElement("div");
+      projectDiv.classList.add("project");
+      projectDiv.id = id;
+
+      projectDiv.innerHTML = `
+        <h2>${project.name}</h2>
+        <p><strong>Descripción:</strong> ${project.description}</p>
+        <p><strong>Contenido:</strong> ${project.content}</p>
+        <p><strong>Completado en:</strong> ${project.completed_on}</p>
+        <img src="${project.image}" alt="${project.name}">
+        <p><a href="1.html?id=${project.id}">Ver más detalles</a></p>  <!-- Enlace al detalle del proyecto con el id -->
+      `;
+
+      container.appendChild(projectDiv);
+    }
+  </script>
+   <script src="scripts/main.js"></script>
+    
+   <script src="functions.js/server.js"></script>
+</body>
+</html>
+
+  
+ 

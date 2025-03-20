@@ -1,0 +1,342 @@
+#hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    align-items: center;
+    height: 100vh;
+    padding: 50px;
+    position: relative;
+}
+
+.heroText {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    padding-left: 1rem;
+    padding-right: 4rem;
+}
+
+.heroText h1 {
+    font-size: 3rem;
+    color: var(--color-secondary-dark);
+}
+.heroImages {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2 / 3;
+}
+/* Imagen de fondo */
+.heroImages img:nth-child(3) { 
+    position: absolute;
+    width: 30rem;
+    object-fit:cover;
+    z-index: 1;
+}
+
+/* Card 1 (superior izquierda) */
+.heroImages img:nth-child(1) { 
+    position: absolute;
+    top: 1%;
+    left: 2%;
+    width: 20rem;
+    z-index: 2; 
+}
+
+/* Card 2 (inferior derecha) */
+.heroImages img:nth-child(2) { 
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    width: 20rem;
+    z-index: 2; 
+}
+
+@media screen and (max-width: 768px) {
+    #hero {
+        display: flex; 
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        padding: 30px;
+        text-align: center;
+    }
+
+    .heroText {
+        grid-column: auto;
+        grid-row: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .heroText h1 {
+        font-size: 2rem; 
+    }
+
+    .heroImages {
+        grid-column: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+        position: relative;
+    }
+
+    
+    .heroImages img:nth-child(3) { 
+        width: 80%;
+    }
+
+    .heroImages img:nth-child(1),
+    .heroImages img:nth-child(2) {
+        width: 60%;
+        position: relative; 
+        top: auto;
+        left: auto;
+  
+    }
+}
+
+.banner-logos {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    filter: grayscale(100%);
+}
+
+@media screen and (max-width: 768px) {
+   
+
+    .banner-logos {
+        display: flex;
+    flex-wrap: wrap;  
+    gap: 4rem;
+    
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+   
+    #recent-projects h2 {
+        padding-bottom: 4rem;
+    }
+    .project-cards {
+        display: flex;
+    flex-wrap: wrap;  
+    gap: 4rem;
+    justify-content: center;
+    
+    }
+
+}
+
+#recent-projects h2 {
+    padding-bottom: 4rem;
+    display: flex;
+    justify-content: start;
+}
+
+.project-cards {
+   padding-bottom: 10rem;
+
+}
+
+/* client testimonial section*/
+
+#client-testimonials {
+    
+    background-color: var(--color-secondary-dark);
+    background-image: url(/images/orbit.png);
+    object-fit: contain;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+
+}
+
+.testimonial-image.top-left {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+}
+
+.testimonial-image.top-right {
+    grid-column: 3 / 4;
+    grid-row: 1 / 2;
+}
+.testimonial-image.bottom-left {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+}
+.testimonial-image.bottom-right {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+}
+
+.testimonial-center {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+ 
+.client-bottom {
+    display: flex;
+    justify-content: center;
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    color: var(--color-secondary-light);
+    
+}
+.testimonial-client {
+    width: 4rem;
+    height: 4rem;
+    display: flex;
+    justify-self: center;
+}
+
+.testimonial-center h2{
+    color: var(--color-secondary-light);
+}
+
+.testimonial-center h4 {
+    color: var(--color-action);
+}
+
+.client-name {
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+
+    #client-testimonials {
+        grid-template-columns: 1fr; /* Cambiar de 3 columnas a 1 para que todo esté en una sola columna */
+        grid-template-rows: auto auto auto; /* Ajustar el tamaño de las filas */
+        padding: 1rem; /* Reducir el padding para dispositivos móviles */
+    }
+
+    
+    .testimonial-image.top-left,
+    .testimonial-image.top-right,
+    .testimonial-image.bottom-left,
+    .testimonial-image.bottom-right {
+        grid-column: 1 / 2; 
+        grid-row: auto; 
+        width: 100%; 
+        height: auto; 
+        object-fit: cover; 
+        display: none;
+    }
+
+    .testimonial-center {
+        grid-column: 1 / 2; /* Centrar el testimonio */
+        grid-row: auto; /* Ajustar la fila para que se vea bien */
+    }
+
+    /* Para el cliente */
+    .client-bottom {
+        grid-column: 1 / 2; /* Centrar el cliente */
+        grid-row: auto; /* Ajustar fila */
+        justify-content: center;
+    }
+
+    .testimonial-client {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .client-name {
+        font-size: 1.5rem; /* Reducir el tamaño del texto del nombre */
+    }
+}
+
+
+/* services section*/
+
+#services {
+    margin-top: 10rem;
+}
+
+.icon-card {
+    background-color: var(--color-secondary-light);
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    width: 100px; 
+    height: 100px;
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#doubts {
+    margin-top: 10rem;
+    background-color: var(--color-action);
+    width: 95vw;
+    height: 20vw;
+    
+}
+
+.doubts-div {
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.doubts-div h2 {
+    margin-top: 5rem;
+    color: var(--color-secondary-dark);
+   
+}
+
+.email-form, .button-general.form {
+    border: none; 
+    height: 60px; 
+    width: 300px;
+    padding: 5px; 
+    font-size: 1rem; 
+    outline: none; 
+    gap: 3rem;
+    
+}
+ 
+.button-general.form {
+    width: 200px;
+}
+
+/* --------------------------- */
+@media screen and (max-width: 768px) {
+    #doubts {
+        margin-top: 5rem; 
+        height: 40vw; 
+       
+    }
+
+    .doubts-div h2 {
+        margin-top: 3rem; 
+        font-size: 1.5rem; 
+        padding: 0 1rem; 
+    }
+
+    .email-form, .button-general.form {
+        width: 80%; 
+        margin: 10px 0; 
+        font-size: 0.9rem; 
+    }
+
+    .button-general.form {
+        width: 80%; 
+    }
+}

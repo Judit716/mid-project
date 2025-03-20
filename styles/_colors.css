@@ -1,0 +1,20 @@
+:root {
+     /* Colores primarios */
+    --button-color: #072AC8;
+    --primary-color: #43D2FF;
+    --color-primary-light: #D1EDFF;
+    --color-primary-dark: #A2D6F9;  
+
+    --color-action: #FFC600;
+   
+        /* Colores secundarios */
+        --color-secondary: #6B708D;     
+        --color-secondary-light: #F2F4FC; 
+        --color-secondary-soft: #ECF7FF; 
+        --color-secondary-dark: #292E47;  
+        
+        /* Colores de fondo y texto */
+        --color-background: #F4F6FC;   /* Fondo claro */
+        --color-text: #514D67;         
+}
+
