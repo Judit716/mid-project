@@ -1,10 +1,9 @@
 const https = import("https");
 let projects = null;
 
-// Ruta de la URL pública donde está alojado db.json
 const dbUrl = "https://mid-project-judit-netlify>/public/db.json";
 
-// Función para obtener los datos desde db.json
+
 const readData = () => {
   return new Promise((resolve, reject) => {
     https
@@ -27,7 +26,7 @@ const readData = () => {
   });
 };
 
-// Función para obtener los datos desde localStorage
+
 const loadData = async () => {
   try {
     if (!projects) {
@@ -43,25 +42,25 @@ const loadData = async () => {
     return JSON.parse(projects);
   } catch (error) {
     console.error("Error al cargar los datos:", error);
-    return { projects: [] }; // Retorna un array vacío en caso de error
+    return { projects: [] }; 
   }
 };
 
-// Función para guardar los datos en localStorage
+
 const saveData = (data) => {
   projects = JSON.stringify(data);
 };
 
-// Función para manejar las solicitudes
+
 module.exports.handler = async (event) => {
   const { path, httpMethod } = event;
-  const [, , entity, id] = path.split("/"); // Separar las partes de la URL (ej. /api/projects/1)
+  const [, , entity, id] = path.split("/"); 
 
-  // Leer datos desde localStorage
+  
   let data = await loadData();
 
   if (httpMethod === "GET") {
-    // GET a "/projects" o "/projects/{id}"
+   
     if (entity === "projects") {
       if (id) {
         // Si se proporciona un id, devolver el proyecto específico

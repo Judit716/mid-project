@@ -37,3 +37,32 @@ fetch(`http://localhost:5000/projects/${projectId}`)
     console.error('Error fetching project:', error);
   });
 
+
+
+  // easter egg pagina 404
+  document.getElementById("submit-btn").addEventListener("click", function () {
+    const input = document.getElementById("profesor-input").value.trim().toLowerCase();
+    const secretCode = "nacho"; // El nombre secreto que desbloquea el recurso
+    
+    const errorMessage = document.getElementById("error-message");
+    const secreto = document.getElementById("secreto");
+  
+    // Comprobamos si el input coincide con el código secreto
+    if (input === secretCode) {
+      // Mostrar el secreto (video de YouTube)
+      secreto.style.display = "block";
+      
+      // Ejecutar confeti
+      confetti();
+  
+      // Limpiar el input
+      document.getElementById("profesor-input").value = "";
+  
+      // Ocultar mensaje de error si la respuesta es correcta
+      errorMessage.style.display = "none";
+    } else {
+      // Mostrar mensaje de error si la respuesta es incorrecta
+      errorMessage.style.display = "block";
+    }
+  });
+  

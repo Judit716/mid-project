@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error 404</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="/styles/404.css">
+</head>
+<body>
+  <div class="container">
+    <h3>Has encontrado una página que no existe</h3>
+    <h1>¡Bienvenido! Escribe el nombre de nuestro profesor para revelar tu premio</h1>
+    <!-- Formulario -->
+    <div class="form-container">
+        <input type="text" id="profesor-input" placeholder="Escribe el nombre del profesor..." />
+        <button id="submit-btn">Enviar</button>
+      </div>
+  
+      <!-- Mensaje de error -->
+      <p id="error-message" style="display:none; color: red;">¡Respuesta incorrecta! Intenta de nuevo.</p>
+  
+      <!-- Premio  -->
+      <div id="secreto" style="display:none;">
+        <p>¡Has desbloqueado un recurso secreto sobre JavaScript! 🎉</p>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/hdI2bqOjy3c" title="YouTube video player" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+      </div>
+    
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <script src="scripts/main.js"></script>
+</body>
+</html>
+
