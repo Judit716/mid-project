@@ -39,57 +39,43 @@ fetch(`http://localhost:5000/projects/${projectId}`)
 
 
 
- let attempts = 0; // Contador de intentos fallidos
-const correctName = "nacho"; // Nombre correcto
+  let attempts = 0; // Contador d
+  const correctName = "nacho"; 
+  
+  const input = document.getElementById("profesor-input");
+  const button = document.getElementById("submit-btn");
+  const errorMessage = document.getElementById("error-message");
+  const container = document.querySelector(".container");
+  const secreto = document.getElementById("secreto");
+  
+  button.addEventListener("click", () => {
+    const userInput = input.value.trim().toLowerCase();
+    
+  
+    if (userInput === correctName) {
+      
+      secreto.style.display = "block"; 
 
-const input = document.getElementById("profesor-input");
-const button = document.getElementById("submit-btn");
-const errorMessage = document.getElementById("error-message");
-const container = document.querySelector(".container");
-const secreto = document.getElementById("secreto");
-
-button.addEventListener("click", () => {
-  const userInput = input.value.trim().toLowerCase();
+      confetti(); 
+    } else {
+      
+      attempts++;
+      if (attempts === 1) {
+        errorMessage.textContent = "¿En serio? Aún no te sabes su nombre?";
+        darkenScreen();
+      } else if (attempts === 2) {
+        errorMessage.textContent = "¿En serio???";
+      } else if (attempts >= 3) {
+        errorMessage.textContent = "¡Game Over!";
+        triggerExplosion();
+      }
+    }
+  
+    input.value = ""; 
+  });
+  
   
 
-  if (userInput === correctName) {
-    
-    secreto.style.display = "block"; 
-    confetti(); 
-  } else {
-    
-    attempts++;
-    if (attempts === 1) {
-     
-      errorMessage.textContent = "¿En serio? Aún no te sabes su nombre?";
-      darkenScreen();
-    } else if (attempts === 2) {
-      
-      errorMessage.textContent = "¿En serio???";
-    } else if (attempts >= 3) {
-      
-      errorMessage.textContent = "¡Game Over!";
-      triggerExplosion();
-    }
-  }
-
-  input.value = ""; // Limpiar el input después de cada intento
-});
-
-// Función para oscurecer la pantalla
-function darkenScreen() {
-  const overlay = document.createElement("div");
-  overlay.classList.add("dark-overlay");
-  container.appendChild(overlay);
-}
-
-// Función para mostrar la explosión
-function triggerExplosion() {
-  container.classList.add("explosion");
-}
-
-// Confeti cuando se acierta
-function confetti() {
-  confettiLib(); // Llama a una librería externa para animar confeti
-}
-
+  
+  
+  

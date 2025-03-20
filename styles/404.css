@@ -20,17 +20,18 @@ body {
     font-size: 1.2rem;
   }
   
-  .secreto {
-    animation: flash 1s infinite;
-    font-size: 2rem;
-    color: #ff5733;
-    margin-top: 20px;
-  }
+  
   
   @keyframes flash {
     0% { background-color: #f0f8ff; }
     50% { background-color: #ffeb3b; }
     100% { background-color: #f0f8ff; }
+  }
+  .secreto {
+    animation: flash 1s infinite;
+    font-size: 2rem;
+    color: #ff5733;
+    margin-top: 20px;
   }
   
   .video-container {
